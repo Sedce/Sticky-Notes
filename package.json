@@ -1,0 +1,21 @@
+{
+  "name": "sticky-note",
+  "version": "1.0.0",
+  "description": "List of notes built with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Cedez Gulane",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
