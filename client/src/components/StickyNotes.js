@@ -30,11 +30,22 @@ class StickyNotes extends Component {
                     }
                 }}
                 >Add Item</Button>
-                <ListGroup>
+                <ListGroup className="sticky-notes-list">
                     <TransitionGroup className="sticky-notes">
                         {items.map(({id, name}) => (
                             <CSSTransition key={id} timeout={500} classNames="fade">
                                 <ListGroupItem>
+                                    <Button className="remove-btn"
+                                    color="danger"
+                                    size="sm"
+                                    onClick={() => {
+                                        this.setState(state => ({
+                                            items: state.items.filter(item => item.id !== id)
+                                        }));
+                                    }}
+                                    >
+                                        
+                                    </Button>
                                     {name}
                                 </ListGroupItem>
                             </CSSTransition>
